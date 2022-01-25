@@ -1,5 +1,6 @@
 
 import 'package:famfam/HomeScreen.dart';
+import 'package:famfam/register_info.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatelessWidget{
@@ -170,6 +171,7 @@ class Register extends StatelessWidget{
                                       print(passwordConfirmController.text);
                                       if (passwordConfirmController.text == passwordController.text) {
                                         print("Password Matching!");
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) => Register_Info()));
                                       } else {
                                         print("Password Not Matching!");
                                       }
